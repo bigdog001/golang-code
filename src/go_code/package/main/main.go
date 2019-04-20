@@ -7,5 +7,5 @@ import "go_code/package/utils"
 
 func main(){
 	i := utils.Calculate(5,10)
-	fmt.Println("运算结果是:",i)
+	fmt.Printf("运算结果是%.2f",i)
 }   
