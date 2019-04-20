@@ -3,6 +3,7 @@ package main
 import(
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func recycle1() int {
@@ -33,13 +34,24 @@ func recycle3() {
 	}
 }
 
+func randGenerate(){
+	// 从1970年1月1号到现在的秒数
+	fmt.Println(time.Now().Unix())
+
+	// 随机数生成
+	rand.Seed(time.Now().UnixNano())
+	for a := 10;a > 5;a-- {
+		b := rand.Intn(100)
+		fmt.Println("随机数",b)
+	}
+	
+}
 func main(){
 	// recycle1()
 	// recycle2()
-	recycle3()
+	//recycle3()
 	// GO语言没有while和dowhile语句.这就是go的设计风格:尽量只有一种解决方案
 	
-	a := rand.Intn(100)
-	fmt.Println("随机数",a)
+	randGenerate()
 
 }
