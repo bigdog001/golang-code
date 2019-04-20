@@ -28,6 +28,7 @@ func breakLabel(){
 	}
 }
 func main(){
+	// break是跳出离它最近的那一层循环!
 	// breakDemo1()
 	// break跳到某个标签
 	breakLabel()
