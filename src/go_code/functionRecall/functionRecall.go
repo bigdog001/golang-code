@@ -26,6 +26,14 @@ func test(a int,b int)(int){
 	return a*b
 }
 
+// 可变参数
+func sum(a int,args... int) int {
+	sum := a;
+	for i:=0;i<len(args);i++{
+		sum += args[i]
+	}
+	return sum;
+}
 func main(){
 	// 函数可以传值,也可以传地址
 	c,d := CalculatesumAndSub(15,10)
@@ -51,7 +59,9 @@ func main(){
 	var num Myint = 10
 	fmt.Println("num是",num)
 
-	
 	res2 := funcAsParameter(test,100,200)
 	fmt.Println("懵逼写法之 res2是",res2)
+
+	res3 := sum(1,2,3)
+	fmt.Println("可变参数之 res3是",res3)
 }   
