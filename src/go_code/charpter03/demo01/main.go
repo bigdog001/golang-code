@@ -22,7 +22,7 @@ func main(){
 	fmt.Println("i=",num);
 
 
-	// 简写, 
+	// 简写, 不能在函数体外或者全局变量里面写
 	abc := "i am a men"
 	fmt.Println("abc =",abc)
 
