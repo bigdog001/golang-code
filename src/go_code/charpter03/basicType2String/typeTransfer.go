@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 )
 
 func main(){
@@ -24,7 +25,14 @@ func main(){
 	fmt.Println("",str1)
 	
 	
+	// 调用api将基本类型(int系列,float系列,bool,string,数组和结构体struct)转换成字符串
+	var str11 string = strconv.FormatInt(int64(c),10)
+	var str12 string = strconv.FormatFloat(float64(c),'f',10,64)
 	
+	fmt.Println("",str11)
+	fmt.Println("",str12)
+	
+	// strconv.itoa
 
 	
 	
