@@ -6,11 +6,18 @@ import (
 	"strings"
 )
 
-func building(){
+func buildin(){
 	var str string = "hello我"
 	// 含有中文的话要转成切片[]rune
 	v := []rune(str)
 	fmt.Println("字符串的长度是",len(v))
+
+	// new用来给基本类型分配地址,make用来给引用类型分配地址
+	num := new(int)
+	fmt.Printf("num的类型是%T num的值是%v num的地址是%v num这个指针指向的值是%v",
+		num,num,&num,*num)
+
+
 }
 func str2int(){
 	n,err := strconv.Atoi("123q")
@@ -26,7 +33,7 @@ func int2str(){
 }
 func main(){
 	// 1,内嵌函数buildin,不用导包可以直接使用的
-	//building()
+	buildin()
 	// 2,字符串转整形
 	//str2int()
 	// 3,整形字符串
@@ -80,8 +87,8 @@ func main(){
 	// fmt.Printf("str=%v",t)
 
 	// 15,将左边指定的字符去掉,同理也可以去掉右边的
-	// s1 := strings.TrimLeft("!he!llo!","!")
-	// fmt.Printf("str=%v",s1)
+	s1 := strings.TrimLeft("!he!llo!","!")
+	fmt.Printf("str=%v",s1)
 
 	// 16,判断字符串是否以指定的字符开始或者结尾.HasSuffix
 	b1 := strings.HasPrefix("hello","h")
