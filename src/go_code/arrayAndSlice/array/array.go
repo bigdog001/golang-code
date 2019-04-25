@@ -41,6 +41,26 @@ func iterateArr(){
 		fmt.Printf("i=%v,v=%v \n",i,v)
 	}
 }
+func dubbleDimensionArr(){
+	var myGirlArr [5][3]int 
+	myGirlArr[1][1]=123
+	fmt.Println("二维数组的内容是",myGirlArr)
+
+	myGirlArr1 := [2][3]int{{1,3,5},{4,5}}
+	for i:=0;i<len(myGirlArr1);i++{
+		for j:=0;j<len(myGirlArr1[i]);j++{
+			fmt.Println("二维数组遍历",myGirlArr1[i][j])
+		}
+	}
+
+	// for range 遍历
+	for _,v := range myGirlArr1{
+		for j,k := range v{
+			fmt.Printf("j=%v,k=%v \n",j,k)
+		}
+	}
+
+}
 func main(){
 	// 数组有值传递和地址传递,值传递的话函数执行前后变量的值互相不影响. 
 	// arrayDemo1()
@@ -48,4 +68,11 @@ func main(){
 
 	// 数组独有的遍历(不同于普通的遍历)
 	iterateArr()
+
+	var myGirls = [...]int{}
+	fmt.Printf("数组的内容是%v \n",myGirls)
+
+	//二维数组遍历
+	dubbleDimensionArr()
+
 }
