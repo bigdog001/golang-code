@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 func slideCreat1(){
 	var i [5]int = [5]int{2,15,55,25,35}
@@ -80,5 +81,13 @@ func main(){
 	sliceCoppy()
 
 	//切片作为参数传递时,就像指针一样,会影响外面的值.
+
+	//排序
+	ss := make([]int,2)
+	ss = append(ss,55)
+	ss = append(ss,15)
+	ss = append(ss,5)
+	sort.Ints(ss)
+	fmt.Println(ss)
 
 }
