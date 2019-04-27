@@ -25,6 +25,7 @@ func structCreat1(){
 
 func structCreat2(){
 	var cat1 Cat = Cat{"小狗",1,"gray"}
+	var cat2 Cat = Cat{Age:1,Color:"gray",Name:"小狗"}
 	fmt.Println("cat1是",cat1)
 }
 func structCreat3(){
