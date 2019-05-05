@@ -9,7 +9,10 @@ type Cat struct{
 }
 
 func channelCreate1(){
+	// 管道声明为只写  var intchan chan<- int
+	// 管道声明为只读  var intchan <-chan int
 	var intchan chan int
+
 	intchan = make(chan int,3)
 
 	fmt.Printf("intchan管道的值是%v,intchan管道的地址是%p \n",intchan,&intchan)
