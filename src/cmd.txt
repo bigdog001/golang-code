@@ -1,0 +1,9 @@
+windows常用命令
+
+追踪路由,trace追踪rt路由缩写
+tracert www.baidu.com   
+
+//重启网卡
+ipconfig/renew
+//断网
+ipconfig/release
