@@ -7,3 +7,7 @@ tracert www.baidu.com
 ipconfig/renew
 //断网
 ipconfig/release
+
+
+//查看端口
+netstat -a
